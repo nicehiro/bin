@@ -1,0 +1,14 @@
+#!/bin/bash
+# read email from gmail
+
+username=wfy11235813@gmail.com
+password=11235813wfy
+
+SHOW_COUNT=5
+
+echo
+
+curl -u $username:$password --silent "https://mail.google.com/mail/feed/atom" | \
+	tr -d '\n' | sed 's:</entry>:\n:g' | \
+	sed 's/.*<title>\(.*\)<\/title.*<author><name>\([^<]*\)<\/name><email>\([^<]*\).*/From: \2 [\3] \nSubject: \1\n/p' | \
+	head -n $(( $SHOW_COUNT * 3 ))

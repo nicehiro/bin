@@ -1,0 +1,9 @@
+#!/bin/bash
+# automatic expect
+
+spawn ./test.sh
+expect "Enter a number:"
+send "1/n"
+expect "Enter a name:"
+send "hiro/n"
+expect eof

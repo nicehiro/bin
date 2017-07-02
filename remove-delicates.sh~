@@ -1,0 +1,4 @@
+#!/bin/bash
+# remove the same file and keep one
+
+ls -lS --time-style=long-isob | awk 'BEGIN

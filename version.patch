@@ -1,0 +1,9 @@
+--- version1	2017-06-21 20:00:21.115096859 +0800
++++ version2	2017-06-21 20:01:06.003095943 +0800
+@@ -1,5 +1,5 @@
+ this is the original text
+-line1
+ line2
+ line3
+ happy hacking!
++GNU is not UNIX
