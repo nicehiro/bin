@@ -4,3 +4,5 @@
 
 50 9 * * 4 /home/hiro/mycron/signin.sh
 
+0 */5 * * * /home/hiro/bin/auto-backup.sh
+
