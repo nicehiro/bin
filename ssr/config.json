@@ -1,25 +1,16 @@
 {
-    "server": "23.106.141.140",
+    "server": "v1.dedaa.com",
     "server_ipv6": "::",
-    "server_port": 443,
+    "server_port": 8616,
     "local_address": "127.0.0.1",
     "local_port": 1080,
 
-    "password": "9090",
+    "password": "20190307",
     "method": "aes-256-cfb",
     "protocol": "origin",
     "protocol_param": "",
-    "obfs": "tls1.2_ticket_auth",
-    "obfs_param": "",
-    "speed_limit_per_con": 0,
-    "speed_limit_per_user": 0,
-
-    "additional_ports" : {}, // only works under multi-user mode
-    "additional_ports_only" : false, // only works under multi-user mode
-    "timeout": 120,
-    "udp_timeout": 60,
-    "dns_ipv6": false,
-    "connect_verbose_info": 0,
-    "redirect": "",
+    "obfs": "",
+    "timeout": 300,
     "fast_open": false
 }
+
