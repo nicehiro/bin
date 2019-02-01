@@ -1,0 +1,78 @@
+{
+  "log": {
+    "loglevel": "warning", 
+    "access": "",  
+    "error": ""
+  },
+  "inbound": {
+    "port": 1080, 
+    "protocol": "socks", 
+    "settings": {
+      "auth": "noauth", 
+      "udp": true
+    }
+  },
+  "outbound": {
+    "protocol": "vmess", 
+    "settings": {
+      "vnext": [
+        {
+          "address": "45.77.121.123", 
+          "port": 34759,
+          "users": [
+            {
+              "id": "11139055-26a1-4099-a8d5-8e3b0c2a4772", 
+              "alterId": 64 
+            }
+          ]
+        }
+      ]
+    },
+    "streamSettings": {
+      "network": "mkcp"
+    }
+  },
+  "outboundDetour": [
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct" 
+    }
+  ],
+  "routing": {
+    "strategy": "rules",
+    "settings": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "domain": [
+            "tanx.com",
+            "googeadsserving.cn",
+            "baidu.com"
+          ],
+          "type": "field",
+          "outboundTag": "adblock"       
+        },
+        {
+          "domain": [
+            "amazon.com",
+            "microsoft.com",
+            "jd.com",
+            "youku.com",
+            "baidu.com"
+          ],
+          "type": "field",
+          "outboundTag": "direct"
+        },
+        {
+          "type": "chinasites",
+          "outboundTag": "direct"
+        },
+        {
+          "type": "chinaip",
+          "outboundTag": "direct"
+        }
+      ]
+    }
+  }
+}
