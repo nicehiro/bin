@@ -1,0 +1,8 @@
+* script
+
+My scripts to make life better.
+
+- aria2.conf Aria配置文件
+- [[md2org.sh][md2org]] markdown file to org file
+- [[restore.sh][restore]] retore basic software and configration
+- [[auto-signin/app_data_analysis.py][auto-signin]] ZSTU auto signin
