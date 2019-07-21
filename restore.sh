@@ -61,6 +61,7 @@ fi
 
 ## install git
 sudo pacman -S yay
+yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
 yay -S git
 
 
@@ -87,7 +88,7 @@ git clone git@github.com:nicehiro/nicehiro.github.io.git ~/Documents/nicehiro.me
 
 ## Chromium gimp inkscape spotify
 yay -S google-chromium gimp inkscape spotify
-if [ $0 -eq 0 ]
+if [ $? -eq 0 ]
 then
     print 0 "Chromium GIMP InkScape Spotify Install finished!"
 else
